@@ -1,0 +1,86 @@
+\begin{thebibliography}{8}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Deng \& Yu(2014)}]{deng2014deep}
+\bibinfo{author}{Deng, L.}, \& \bibinfo{author}{Yu, D.} (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Deep learning: methods and applications}.
+\newblock {\it \bibinfo{journal}{Foundations and trends in signal
+  processing}\/},  {\it \bibinfo{volume}{7}\/}, \bibinfo{pages}{197--387}.
+%Type = Book
+\bibitem[{Goodfellow et~al.(2016)Goodfellow, Bengio, Courville \&
+  Bengio}]{goodfellow2016deep}
+\bibinfo{author}{Goodfellow, I.}, \bibinfo{author}{Bengio, Y.},
+  \bibinfo{author}{Courville, A.}, \& \bibinfo{author}{Bengio, Y.}
+  (\bibinfo{year}{2016}).
+\newblock {\it \bibinfo{title}{Deep learning}\/} volume~\bibinfo{volume}{1}.
+\newblock \bibinfo{publisher}{MIT press Cambridge}.
+%Type = Article
+\bibitem[{Kamilaris \& Prenafeta-Bold{\'u}(2018)}]{kamilaris2018deep}
+\bibinfo{author}{Kamilaris, A.}, \& \bibinfo{author}{Prenafeta-Bold{\'u},
+  F.~X.} (\bibinfo{year}{2018}).
+\newblock \bibinfo{title}{Deep learning in agriculture: A survey}.
+\newblock {\it \bibinfo{journal}{Computers and electronics in agriculture}\/},
+  {\it \bibinfo{volume}{147}\/}, \bibinfo{pages}{70--90}.
+%Type = Article
+\bibitem[{Leiner et~al.({2021})Leiner, Bennink, Mol, Kuijf \&
+  Veldhuis}]{ISI:000614045200001}
+\bibinfo{author}{Leiner, T.}, \bibinfo{author}{Bennink, E.},
+  \bibinfo{author}{Mol, C.~P.}, \bibinfo{author}{Kuijf, H.~J.}, \&
+  \bibinfo{author}{Veldhuis, W.~B.} (\bibinfo{year}{{2021}}).
+\newblock \bibinfo{title}{{Bringing AI to the clinic: blueprint for a
+  vendor-neutral AI deployment infrastructure}}.
+\newblock {\it \bibinfo{journal}{{INSIGHTS INTO IMAGING}}\/},  {\it
+  \bibinfo{volume}{{12}}\/}.
+%Type = Article
+\bibitem[{Mackenzie et~al.(1992)Mackenzie, Hirst, Battistutta \&
+  Green}]{mackenzie1992risk}
+\bibinfo{author}{Mackenzie, F.~D.}, \bibinfo{author}{Hirst, L.~W.},
+  \bibinfo{author}{Battistutta, D.}, \& \bibinfo{author}{Green, A.}
+  (\bibinfo{year}{1992}).
+\newblock \bibinfo{title}{Risk analysis in the development of pterygia}.
+\newblock {\it \bibinfo{journal}{Ophthalmology}\/},  {\it
+  \bibinfo{volume}{99}\/}, \bibinfo{pages}{1056--1061}.
+%Type = Article
+\bibitem[{Reddy et~al.({2021})Reddy, Pramada \& Roshni}]{ISI:000617129000001}
+\bibinfo{author}{Reddy, B. S.~N.}, \bibinfo{author}{Pramada, S.~K.}, \&
+  \bibinfo{author}{Roshni, T.} (\bibinfo{year}{{2021}}).
+\newblock \bibinfo{title}{{Monthly surface runoff prediction using artificial
+  intelligence: A study from a tropical climate river basin}}.
+\newblock {\it \bibinfo{journal}{{JOURNAL OF EARTH SYSTEM SCIENCE}}\/},  {\it
+  \bibinfo{volume}{{130}}\/}.
+%Type = Article
+\bibitem[{Sun et~al.({2021})Sun, Xie, Yu, Jiang, Zheng \&
+  Pan}]{ISI:000609465600001}
+\bibinfo{author}{Sun, S.}, \bibinfo{author}{Xie, Z.}, \bibinfo{author}{Yu, K.},
+  \bibinfo{author}{Jiang, B.}, \bibinfo{author}{Zheng, S.}, \&
+  \bibinfo{author}{Pan, X.} (\bibinfo{year}{{2021}}).
+\newblock \bibinfo{title}{{COVID-19 and healthcare system in China: challenges
+  and progression for a sustainable future}}.
+\newblock {\it \bibinfo{journal}{{GLOBALIZATION AND HEALTH}}\/},  {\it
+  \bibinfo{volume}{{17}}\/}.
+%Type = Article
+\bibitem[{Zhang et~al.({2021})Zhang, Shen, Guo, Wang, Weng, Ye, Wang, He, Yang,
+  Cao \& Hou}]{ISI:000614810800001}
+\bibinfo{author}{Zhang, X.}, \bibinfo{author}{Shen, C.}, \bibinfo{author}{Guo,
+  X.}, \bibinfo{author}{Wang, Z.}, \bibinfo{author}{Weng, G.},
+  \bibinfo{author}{Ye, Q.}, \bibinfo{author}{Wang, G.}, \bibinfo{author}{He,
+  Q.}, \bibinfo{author}{Yang, B.}, \bibinfo{author}{Cao, D.}, \&
+  \bibinfo{author}{Hou, T.} (\bibinfo{year}{{2021}}).
+\newblock \bibinfo{title}{{ASFP (Artificial Intelligence based Scoring Function
+  Platform): a web server for the development of customized scoring
+  functions}}.
+\newblock {\it \bibinfo{journal}{{JOURNAL OF CHEMINFORMATICS}}\/},  {\it
+  \bibinfo{volume}{{13}}\/}.
+
+\end{thebibliography}

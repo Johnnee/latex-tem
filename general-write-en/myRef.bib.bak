@@ -1,0 +1,71 @@
+@book{goodfellow2016deep,
+	title={Deep learning},
+	author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron and Bengio, Yoshua},
+	volume={1},
+	number={2},
+	year={2016},
+	publisher={MIT press Cambridge}
+}
+@article{deng2014deep,
+	title={Deep learning: methods and applications},
+	author={Deng, Li and Yu, Dong},
+	journal={Foundations and trends in signal processing},
+	volume={7},
+	number={3--4},
+	pages={197--387},
+	year={2014},
+	publisher={Now Publishers Inc. Hanover, MA, USA}
+}
+@article{kamilaris2018deep,
+	title={Deep learning in agriculture: A survey},
+	author={Kamilaris, Andreas and Prenafeta-Bold{\'u}, Francesc X},
+	journal={Computers and electronics in agriculture},
+	volume={147},
+	pages={70--90},
+	year={2018},
+	publisher={Elsevier}
+}
+@article{mackenzie1992risk,
+	title={Risk analysis in the development of pterygia},
+	author={Mackenzie, Fraser D and Hirst, Lawrence W and Battistutta, Diana and Green, Adele},
+	journal={Ophthalmology},
+	volume={99},
+	number={7},
+	pages={1056--1061},
+	year={1992},
+	publisher={Elsevier}
+}
+@article{ ISI:000609465600001,
+	Author = {Sun, Shuangyi and Xie, Zhen and Yu, Keting and Jiang, Bingqian and
+	Zheng, Siwei and Pan, Xiaoting},
+	Title = {{COVID-19 and healthcare system in China: challenges and progression for
+	a sustainable future}},
+	Journal = {{GLOBALIZATION AND HEALTH}},
+	Year = {{2021}},
+	Volume = {{17}},
+	Number = {{1}},
+	Month = {{DEC 21}},
+	Abstract = {{With the ongoing COVID-19 outbreak, healthcare systems across the world
+	have been pushed to the brink. The approach of traditional healthcare
+	systems to disaster preparedness and prevention has demonstrated
+	intrinsic problems, such as failure to detect early the spread of the
+	virus, public hospitals being overwhelmed, a dire shortage of personal
+	protective equipment, and exhaustion of healthcare workers.
+	Consequently, this situation resulted in manpower and resource costs,
+	leading to the widespread and exponential rise of infected cases at the
+	early stage of the epidemic. To limit the spread of infection, the
+	Chinese government adopted innovative, specialized, and advanced
+	systems, including empowered Fangcang and Internet hospitals, as well as
+	high technologies such as 5G, big data analysis, cloud computing, and
+	artificial intelligence. The efficient use of these new forces helped
+	China win its fight against the virus. As the rampant spread of the
+	virus continues outside China, these new forces need to be integrated
+	into the global healthcare system to combat the disease. Global
+	healthcare system integrated with new forces is essential not only for
+	COVID-19 but also for unknown infections in the future.}},
+	DOI = {{10.1186/s12992-021-00665-9}},
+	Article-Number = {{14}},
+	EISSN = {{1744-8603}},
+	ResearcherID-Numbers = {{bill/AAM-6217-2021}},
+	Unique-ID = {{ISI:000609465600001}},
+}

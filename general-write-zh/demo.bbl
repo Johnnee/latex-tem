@@ -1,0 +1,26 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Adams(1995)]{adams1995hitchhiker}
+ADAMS~D.
+\newblock The hitchhiker's guide to the galaxy[M/OL].
+\newblock San Val, 1995.
+\newblock \url{http://books.google.com/books?id=W-xMPgAACAAJ}.
+
+\bibitem[王征\ 等(2017)王征, 李皓月, 许洪山, and
+  孙美君]{王征2017基于卷积神经网络和}
+王征, 李皓月, 许洪山, 等.
+\newblock 基于卷积神经网络和SVM的中国画情感分类[J].
+\newblock 南京师大学报(自然科学版), 2017\allowbreak (3): 79.
+
+\end{thebibliography}

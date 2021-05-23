@@ -43,28 +43,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 设置标题阴影 %%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,shadow=true]
 
-% 计时器
-\def\pdfcolon{%
-	\clock@setfonsize\clock@setheight\clock@setfontcolor%\clock@setwidth
-	\setbox\sizebox=\hbox{\TextField[readonly=true, name=separatortime, width=0.90\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize,value=:]{}}%
-	\vrule width 0pt height 2pt\kern-0.4pt\kern-\wd\sizebox\kern 0.90\clock@fontsize{\raisebox{-\b@h\clock@fontsize}{\raisebox{-\a@h pt}%
-			{\mbox{\TextField[name=separatortime, width=0.90\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize,
-					readonly=true,value=:]{}\kern-0.90\clock@fontsize\kern\a@one pt\kern \b@one\clock@fontsize\vrule width 0pt height 2pt}}}}%
+
+% ################################ 设置页眉 ##########################
+% 去掉 子标题subsection
+\defbeamertemplate*{headline}{miniframes theme no subsection}
+{%
+	\begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+	\end{beamercolorbox}
+	\begin{beamercolorbox}{section in head/foot}
+		\vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+	\end{beamercolorbox}
 }
 
-\def\clockfield#1{%
-	\clock@setfonsize\clock@setheight\clock@setfontcolor%\clock@setwidth
-	\setbox\sizebox=\hbox{\TextField[readonly=true, name=#1, width=1.6\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize]{}}%
-	\vrule width 0pt height 2pt\kern-\a@a pt\kern-\wd\sizebox\kern 1.6\clock@fontsize{\raisebox{-\b@h\clock@fontsize}%
-		{\raisebox{-\a@h pt}{\mbox{\TextField[name=#1, width=1.6\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize,readonly=true,
-					value={}]{}\kern-1.6\clock@fontsize\kern\a@a pt\kern \b@b\clock@fontsize\vrule width 0pt height 2pt}}}}%
-}
+\setbeamertemplate{footline}[miniframes theme no subsection]
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 设置页脚 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[timeinterval=2.0, timeduration=2.0, timedeath=0,
-fillcolorwarningsecond=white!60!yellow,timewarningfirst=900,timewarningsecond=1080]{tdclock}
-%\setbeamertemplate{background}{\rule{0em}{.99\paperheight}\hspace{.5em}{\color{white}\tiny\bfseries\crono}}
 
 \makeatletter
 \defbeamertemplate*{footline}{myfootline}

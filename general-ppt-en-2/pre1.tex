@@ -55,14 +55,31 @@
 \setbeamercolor{section in head/foot}{bg=bluecolor,fg=whitecolor} % 页眉背景颜色
 \setbeamercolor{subsection in head/foot}{fg=whitecolor} % 页眉背景颜色
 
-\setbeamercolor{title}{fg=blackcolor} % 首页标题颜色
-\setbeamercolor{frametitle}{fg=bluecolor} % 每页标题颜色
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 设置标题阴影 %%%%%%%%%%%%%%%%%%%%%
-\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,shadow=true]
+\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+\definecolor{UBCgrey}{rgb}{0.3686, 0.5255, 0.6235} % UBC Grey (secondary)
 
-\setbeamertemplate{subsection}{}
+%\setbeamercolor{palette primary}{bg=bluecolor,fg=whitecolor}
+%\setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+%\setbeamercolor{structure}{fg=UBCblue} % itemize, enumerate, etc
+%\setbeamercolor{section in toc}{fg=UBCblue} % TOC sections
+
+% Override palette coloring with secondary
+%\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,shadow=true]
+%\setbeamercolor{title page}{bg=bluecolor,fg=bluecolor}
+
+%\setbeamercolor{title}{fg=whitecolor} % 首页标题颜色,白字蓝背景
+\setbeamercolor{title}{fg=blackcolor} % 首页标题颜色
+
+\setbeamercolor{frametitle}{fg=bluecolor} % 每页标题颜色
+
 
 % ################################ 设置页眉 ##########################
 % 去掉 子标题subsection
@@ -79,11 +96,12 @@
 
 \setbeamertemplate{footline}[miniframes theme no subsection]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 时钟和计时器 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[font=Times,timeinterval=1]{tdclock}
+\usepackage{hyperref,xkeyval,xcolor}
+\usepackage[font=Times, timeinterval=1]{tdclock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 设置页脚 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[timeinterval=2.0, timeduration=2.0, timedeath=0,
-fillcolorwarningsecond=white!60!yellow,timewarningfirst=900,timewarningsecond=1080]{tdclock}
-%\setbeamertemplate{background}{\rule{0em}{.99\paperheight}\hspace{.5em}{\color{white}\tiny\bfseries\crono}}
 
 \makeatletter
 \defbeamertemplate*{footline}{myfootline}
@@ -96,10 +114,18 @@ fillcolorwarningsecond=white!60!yellow,timewarningfirst=900,timewarningsecond=10
 		\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
 			\usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~\insertshortinstitute}
 		\end{beamercolorbox}%
-		\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1ex,right]{title in head/foot}%
+		
+		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1ex,right]{title in head/foot}%
+			%			初始化 \initclock 在文档开头
+%			\crono\hspace*{1em} % 计时器
+		\end{beamercolorbox}%
+		
+		\begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,right]{title in head/foot}%
+%			初始化 \initclock 在文档开头
+			\tdhours:\tdminutes \hspace*{1em} % 时钟
 			\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
 			\insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-	\end{beamercolorbox}}%
+		\end{beamercolorbox}}%
 	\vskip0pt%
 }
 \makeatother
@@ -124,11 +150,14 @@ fillcolorwarningsecond=white!60!yellow,timewarningfirst=900,timewarningsecond=10
 
 % #########################################
 
-% 字体
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-%structurebold, structurebolditalic, structuresmallcapsserif, structureitalicsserif, serif and default.
-\usefonttheme{serif}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 字体
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+%structurebold, structuresmallcapsserif, structureitalicsserif, serif and default.
+%\usefonttheme{serif}
+%\usepackage{Times}
+\usepackage{newtxtext,newtxmath}
+%\usepackage{noto}
 
 %字体类型 mathptmx, helvet, avat, bookman, chancery, charter, culer, mathtime, mathptm, newcent, palatino, and pifont.
 %\usepackage{helvet}
@@ -222,6 +251,7 @@ fillcolorwarningsecond=white!60!yellow,timewarningfirst=900,timewarningsecond=10
 
 \AtBeginSection[]
 {
+	
 	\begin{frame}
 		\frametitle{Outline}
 		\tableofcontents[currentsection]
@@ -229,11 +259,13 @@ fillcolorwarningsecond=white!60!yellow,timewarningfirst=900,timewarningsecond=10
 }
 
 \begin{document}
+	
 	\begin{frame}
+		\initclock % 时钟和计时器初始化
 %		\Background
 		\titlepage
 	\end{frame}
-
+	
 	\begin{frame}
 		\frametitle{Outline}
 		\tableofcontents

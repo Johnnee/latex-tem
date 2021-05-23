@@ -21,7 +21,9 @@
 %\usetheme{Copenhagen}
 %\usepackage{lineno,hyperref}
 \usepackage[utf8]{inputenc}
-\usetheme[]{Berlin} %T
+\usetheme{Berlin} %T
+%\usetheme{Dresden}
+%\usetheme{Antibes}
 %\usetheme{Boadilla} %T
 %\usetheme{Darmstadt} %T
 %\usetheme{Frankfurt} %T
@@ -42,6 +44,7 @@
 % ############################ 颜色 ##########################
 \usepackage{xcolor}
 %\setbeamercolor{h1}{fg=black,bg=yellow}
+% 214, 30, 0 红色
 \definecolor{bluecolor}{RGB}{10, 73, 148} % 
 \definecolor{whitecolor}{RGB}{255,255,255}
 \definecolor{blackcolor}{RGB}{18,18,18}
@@ -50,7 +53,7 @@
 \setbeamercolor{title in head/foot}{bg=bluecolor,fg=whitecolor} % 页脚背景颜色
 
 \setbeamercolor{section in head/foot}{bg=bluecolor,fg=whitecolor} % 页眉背景颜色
-\setbeamercolor{subsection in head/foot}{fg=bluecolor} % 页眉背景颜色
+\setbeamercolor{subsection in head/foot}{fg=whitecolor} % 页眉背景颜色
 
 \setbeamercolor{title}{fg=blackcolor} % 首页标题颜色
 \setbeamercolor{frametitle}{fg=bluecolor} % 每页标题颜色
@@ -59,29 +62,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 设置标题阴影 %%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,shadow=true]
 
+\setbeamertemplate{subsection}{}
 
-%\setbeamercolor{h2}{bg=green,fg=blue}
-
-% 计时器
-\def\pdfcolon{%
-	\clock@setfonsize\clock@setheight\clock@setfontcolor%\clock@setwidth
-	\setbox\sizebox=\hbox{\TextField[readonly=true, name=separatortime, width=0.90\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize,value=:]{}}%
-	\vrule width 0pt height 2pt\kern-0.4pt\kern-\wd\sizebox\kern 0.90\clock@fontsize{\raisebox{-\b@h\clock@fontsize}{\raisebox{-\a@h pt}%
-			{\mbox{\TextField[name=separatortime, width=0.90\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize,
-					readonly=true,value=:]{}\kern-0.90\clock@fontsize\kern\a@one pt\kern \b@one\clock@fontsize\vrule width 0pt height 2pt}}}}%
+% ################################ 设置页眉 ##########################
+% 去掉 子标题subsection
+\defbeamertemplate*{headline}{miniframes theme no subsection}
+{%
+	\begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+	\end{beamercolorbox}
+	\begin{beamercolorbox}{section in head/foot}
+		\vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+	\end{beamercolorbox}
 }
 
-\def\clockfield#1{%
-	\clock@setfonsize\clock@setheight\clock@setfontcolor%\clock@setwidth
-	\setbox\sizebox=\hbox{\TextField[readonly=true, name=#1, width=1.6\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize]{}}%
-	\vrule width 0pt height 2pt\kern-\a@a pt\kern-\wd\sizebox\kern 1.6\clock@fontsize{\raisebox{-\b@h\clock@fontsize}%
-		{\raisebox{-\a@h pt}{\mbox{\TextField[name=#1, width=1.6\clock@fontsize, height=1.2\clock@height, align = 0, color =\clock@fontcolor, charsize = \clock@fontsize,readonly=true,
-					value={}]{}\kern-1.6\clock@fontsize\kern\a@a pt\kern \b@b\clock@fontsize\vrule width 0pt height 2pt}}}}%
-}
+\setbeamertemplate{footline}[miniframes theme no subsection]
 
-
-
-%\setbeamercolor{subsection in head/foot}{bg=gray!30,fg=black}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 设置页脚 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[timeinterval=2.0, timeduration=2.0, timedeath=0,
